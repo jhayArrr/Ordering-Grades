@@ -1,22 +1,46 @@
-//Variable is an array for security
-const marks = [80, 75, 74, 70, 68, 41]; //add grades as an array
+var userName;
+ var gradeData = [89, 76, 45, 54, 90, 98, 78, 89];
 
-//This function uses another function, call Single Concern Function (able to use either function for various purposes)
-function calculatedGrade (symbol) {
-  const average = calculateAverage (marks);
-  if (average > 89) return 'A'; //Add appropriate grade or feedback
-  if (average > 79) return 'B'; //Add approriate conditional
-  if (average > 69) return 'C';
-  if (average > 59) return 'D';
-  if (averahe <= 59) return 'F';
-  //This is the last grade left, using the funnel image (metaphor)
-}
-function calculteAverage (array) {
-  let sum = 0;
-  for (let mark of marks) sum += mark; //Example of reading an array and one line to add up the sum of all the grades
-  return sum / marks.length; //"Divide the total marks by the number of grades"
-}
 
-//Use the calculatedGrade function as an output to the console
-//Note: example of using functions more than once (calculateAverage is used in console.log and calculatedGrade)
-console.log ("My letter grade is", calculatedGrade (average), "because my numerical average is", calculateAverage (marks));
+ function addToArray() {
+     txtName = document.getElementById("txtName").value;
+     txtGrade = parseInt(document.getElementById("txtGrade").value);
+
+     alert(txtName + " " + txtGrade);
+     nameData.push(txtName);
+     gradeData.push(txtGrade);
+
+     document.getElementById("txtName").focus();
+     document.getElementById("txtName").value = "";
+     document.getElementById("txtGrade").value = "";
+
+
+ }
+
+ function displayContent() {
+
+     for (var i = 0; i < nameData.length; i++) {
+
+      //document.write("" + nameData[i] + " ," + gradeData[i] + "<br>");
+
+        if (gradeData >= 90) {
+
+             document.write( "" + nameData[i] + "A");
+         }
+         else if (gradeData >= 80) {
+
+             document.write("" + nameData[i] + "B");
+         }
+         else if (gradeData >= 70) {
+             document.write("" + nameData[i] + "C");
+         }
+         else if (gradeData >= 60) {
+             document.write("" + nameData[i] + "D");
+         }
+         else {
+             document.write("" + nameData[i] + "F");
+         }
+
+     }
+
+     }
