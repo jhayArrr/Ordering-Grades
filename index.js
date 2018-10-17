@@ -17,3 +17,5 @@ function calculteAverage (array) {
   for (let mark of marks) sum += mark; //Example of reading an array and one line to add up the sum of all the grades
   return sum / marks.length; //"Divide the total marks by the number of grades"
 }
+
+console.log ("My letter grade is", calculatedGrade (average), "because my numerical average is", calculateAverage (marks));
