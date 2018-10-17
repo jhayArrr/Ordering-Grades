@@ -6,10 +6,10 @@ const marks = [56, 75, 84, 95, 88, 79]; //add grades as an array
 //This function uses another function, call Single Concern Function (able to use either function for various purposes)
 function calculatedGrade (marks) {
   const average = calculateAverage (marks);
-  if (average < 60) return marks 'F'; 
-  if (average < 69) return marks 'D';
-  if (average < 79) return marks 'C';
-  if (average < 89) return marks 'B';
+  if (average < 60) return  'F';
+  if (average < 69) return  'D';
+  if (average < 79) return  'C';
+  if (average < 89) return  'B';
   return A; //This is the last grade left, using the funnel image (metaphor)
 }
 function calculteAverage (array) {
