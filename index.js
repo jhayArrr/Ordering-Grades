@@ -18,4 +18,4 @@ function calculteAverage (array) {
   return sum / marks.length; //"Divide the total marks by the number of grades"
 }
 
-console.log ("My letter grade is", calculatedGrade (average); "because my numerical average is", calculateAverage (marks));
+console.log ("My letter grade is", calculatedGrade (average), ";because my numerical average is", calculateAverage (marks));
