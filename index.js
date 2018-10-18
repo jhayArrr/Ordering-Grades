@@ -9,6 +9,7 @@ function calculatedGrade (average) {
   if (average < 89) return  'B';
   return A; //This is the last grade left, using the funnel image (metaphor)
 
-
-console.log ("My letter grade is", calculatedGrade (average), ";because my numerical average is", calculateAverage (marks));
+  for (let i=0; i<=difference; i++){
+    even = (startingNumber += skipCount) % 2;
+    console.log ("My letter grade is", calculatedGrade (average), ";because my numerical average is", calculateAverage (marks));
 }
