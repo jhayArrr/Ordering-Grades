@@ -10,7 +10,7 @@ function calculatedGrade (average) {
   if (average < 69) return  'D';
   if (average < 79) return  'C';
   if (average < 89) return  'B';
-  return A; //This is the last grade left, using the funnel image (metaphor)
+  if (average <= 100) return 'A'; //This is the last grade left, using the funnel image (metaphor)
 
   function calculteAverage (array) {
     let sum = 0;
