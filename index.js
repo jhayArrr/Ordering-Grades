@@ -1,4 +1,4 @@
-const average = [56, 75, 84, 95, 88, 79]; //add grades as an array
+const marks = [56, 75, 84, 95, 88, 79]; //add grades as an array
 
 //Note: example of using functions more than once (calculateAverage is used in console.log and calculatedGrade)
 console.log ("My letter grade is", calculatedGrade (average), ";because my numerical average is", calculateAverage (marks));
@@ -6,11 +6,11 @@ console.log ("My letter grade is", calculatedGrade (average), ";because my numer
 //This function uses another function, call Single Concern Function (able to use either function for various purposes)
 function calculatedGrade (average) {
   const average = calculateAverage (marks);
-  if (average < 60) return  'F';
-  if (average < 69) return  'D';
-  if (average < 79) return  'C';
-  if (average < 89) return  'B';
-  if (average <= 100) return 'A'; //This is the last grade left, using the funnel image (metaphor)
+  if (calculatedGrade (average) < 60) return  'F';
+  if (calculatedGrade (average) < 69) return  'D';
+  if (calculatedGrade (average) < 79) return  'C';
+  if (calculatedGrade (average) < 89) return  'B';
+  if (calculatedGrade (average) <= 100) return 'A'; //This is the last grade left, using the funnel image (metaphor)
 
   function calculteAverage (array) {
     let sum = 0;
