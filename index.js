@@ -2,7 +2,7 @@ const average = [56, 75, 84, 95, 88, 79]; //add grades as an array
 
 
 //Note: example of using functions more than once (calculateAverage is used in console.log and calculatedGrade)
-console.log ("My letter grade is", calculatedGrade() , ";because my numerical average is", calculateAverage (marks));
+console.log ("My letter grade is", calculatedGrade (average) , ";because my numerical ave. is", calculateAverage (marks));
 
 //This function uses another function, call Single Concern Function (able to use either function for various purposes)
 function calculatedGrade (average) {
