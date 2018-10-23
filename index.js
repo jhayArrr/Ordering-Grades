@@ -1,5 +1,5 @@
 const average = [56, 75, 84, 95, 88, 79]; //add grades as an array
-let marks = [A, B, C, D, F]
+let marks = [A, B, C, D, F];
 
 //Note: example of using functions more than once (calculateAverage is used in console.log and calculatedGrade)
 console.log ("My letter grade is", calculatedGrade (average) + ";because my numerical average is", calculateAverage (marks));
