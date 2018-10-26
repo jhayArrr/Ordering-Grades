@@ -1,20 +1,64 @@
-const average1= [56, 75, 84, 95, 88, 79]; //add grades as an array
+public static void Main(string[] args)
+    {
+        int ARRAYLENGTH = 0;
+        int i = 0;
+        double sum = 0;
 
+        Console.WriteLine("How many scores would you like to enter? ");
+        ARRAYLENGTH = Convert.ToInt32(Console.ReadLine());
 
-//Note: example of using functions more than once (calculateAverage is used in console.log and calculatedGrade)
-console.log ("My letter grade is", calculatedGrade (average1), ";because my numerical ave. is", calculateAverage (marks));
+        string[] test = new string[ARRAYLENGTH];
 
-//This function uses another function, call Single Concern Function (able to use either function for various purposes)
-function calculatedGrade (average1) {
-  const average2 = calculateAverage (average1);
-  if (calculatedGrade (average1) < 60) return  'F';
-  if (calculatedGrade (average1) < 69) return  'D';
-  if (calculatedGrade (average1) < 79) return  'C';
-  if (calculatedGrade (average1) < 89) return  'B';
-  if (calculatedGrade (average1) <= 100) return 'A'; //This is the last grade left, using the funnel image (metaphor)
+        for (i = 0; i < test.Length; i++)
 
-  function calculateAverage (arrays) {
-    let sum = 0;
-    for (let average1 of arrays) sum += arrays; //Example of reading an array and one line to add up the sum of all the grades
-    return sum / arrays.length; }
-  }
+        {
+            Console.Write("Enter your test score " + (i + 1) + ": ");
+            test[i] =
+            Console.ReadLine();
+        }
+        for (i = 0; i < test.Length; i++)
+        {
+            sum = sum +
+            Convert.ToDouble(test[i].Trim());
+        }
+        Console.WriteLine("\nThis is your average = " + (sum / test.Length));
+        Console.WriteLine("\nYour grade is: ");//Not sure how this would work
+        Console.Write("\nPress the [Enter] key to exit.");
+        Console.ReadLine();
+    }
+    double gradePer = sum / test.Length
+string gradeLetter = "F";
+
+if (gradePer >= 60 && gradePer < 70) {
+     gradeLetter = "D";
+} else if (gradePer >= 70 && gradePer < 80) {
+     gradeLetter = "C";
+} // you fill in the rest
+
+Console.WriteLine("\nThis is your average = " + gradePer);
+Console.WriteLine("\nYour grade is: " + gradeLetter);
+
+static char GetLetterGrade(double score)
+{
+    if (score >= 90.0)
+    {
+        return 'A';
+    }
+
+    if (score >= 80.0)
+    {
+        return 'B';
+    }
+
+    if (score >= 70.0)
+    {
+        return 'C';
+    }
+
+    if (score >= 60.0)
+    {
+        return 'D';
+    }
+
+    return 'F';
+}
