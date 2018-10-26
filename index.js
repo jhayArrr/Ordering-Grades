@@ -1,6 +1,4 @@
-
-
-static char GetLetterGrade(double score)
+static char GetLetterGrade(double score);
 {
     if (score >= 90.0)
     {
