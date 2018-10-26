@@ -1,4 +1,4 @@
-const average= [56, 75, 84, 95, 88, 79]; //add grades as an array
+const average1= [56, 75, 84, 95, 88, 79]; //add grades as an array
 
 
 //Note: example of using functions more than once (calculateAverage is used in console.log and calculatedGrade)
