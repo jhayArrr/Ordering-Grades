@@ -16,6 +16,6 @@ function calculatedGrade (average2) {
 }
 function calculateAverage (array) {
   let sum = 0;
-  for (let arrays of average2) sum += marks; //Example of reading an array and one line to add up the sum of all the grades
+  for (let arrays of average1) sum += marks; //Example of reading an array and one line to add up the sum of all the grades
   return sum / marks.length; //"Divide the total marks by the number of grades"
 }
