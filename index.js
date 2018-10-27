@@ -1,18 +1,28 @@
-//Variable is an array for security
-const  average1 = [99, 90, 75, 89, 78, 84, 45, 69]; //add grades as an array
-var average2;
+public static void Main(string[] args)
+    {
+        int ARRAYLENGTH = 0;
+        int i = 0;
+        double sum = 0;
 
-//Use the calculatedGrade function as an output to the console
-//Note: example of using functions more than once (calculateAverage is used in console.log and calculatedGrade)
-console.log ("My letter grade is", average1, "because my numerical average is", calculateAverage (average2));
+        Console.WriteLine("How many scores would you like to enter? ");
+        ARRAYLENGTH = Convert.ToInt32(Console.ReadLine());
 
-function calculateAverage (average2) {
-  const average1 = calculateAverage (average2);
-  if (average1 < 60) return 'F' ; //Add appropriate grade or feedback
-  if (average1 < 69) return 'D' ; //Add approriate conditional
-  if (average1 < 79) return 'C' ;
-  if (average1 < 89) return 'B' ;
-  if (average1 <= 100) return 'A' ; //This is the last grade left, using the funnel image (metaphor)
-}
-function calculateAverage (array) {
-}
+        string[] test = new string[ARRAYLENGTH];
+
+        for (i = 0; i < test.Length; i++)
+
+        {
+            Console.Write("Enter your test score " + (i + 1) + ": ");
+            test[i] =
+            Console.ReadLine();
+        }
+        for (i = 0; i < test.Length; i++)
+        {
+            sum = sum +
+            Convert.ToDouble(test[i].Trim());
+        }
+        Console.WriteLine("\nThis is your average = " + (sum / test.Length));
+        Console.WriteLine("\nYour grade is: ");//Not sure how this would work
+        Console.Write("\nPress the [Enter] key to exit.");
+        Console.ReadLine();
+    }
