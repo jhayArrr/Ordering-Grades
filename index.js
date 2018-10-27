@@ -1,6 +1,6 @@
 //Variable is an array for security
 const  average1 = [99, 90, 75, 89, 78, 84, 45, 69]; //add grades as an array
-var marks;
+var average2;
 
 //Use the calculatedGrade function as an output to the console
 //Note: example of using functions more than once (calculateAverage is used in console.log and calculatedGrade)
