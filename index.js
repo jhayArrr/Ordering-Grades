@@ -1,7 +1,4 @@
-            int score1, score2, score3, score4, score5;
-            double average;
-            letterGrade = DetermineGrade;
-
+var score1, score2, score3, score4, score5:
             Console.WriteLine("Enter Your 5 Grades Below");
             score1 = GetInput("First", 90);
             score2 = GetInput("Second",87);
