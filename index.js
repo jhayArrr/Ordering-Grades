@@ -1,69 +1,21 @@
-function addToArray() {
-		 txtName = document.getElementById("txtName").value;
-		 txtGrade = parseInt(document.getElementById("txtGrade").value);
+//Variable is an array for security
+const marks = [99, 90, 75, 89, 78, 84, 45, 69]; //add grades as an array
 
-		 alert(txtName + " " + txtGrade);
-		 nameData.push(txtName);
-		 gradeData.push(txtGrade);
+//Use the calculatedGrade function as an output to the console
+//Note: example of using functions more than once (calculateAverage is used in console.log and calculatedGrade)
+console.log ("My letter grade is", calculatedGrade (average1), "because my numerical average is", calculateAverage (marks));
 
-		 document.getElementById("txtName").focus();
-		 document.getElementById("txtName").value = "";
-		 document.getElementById("txtGrade").value = "";
-
-
- }
-
- function displayContent() {
-
-		 for (var i = 0; i < nameData.length; i++) {
-
-			//document.write("" + nameData[i] + " ," + gradeData[i] + "<br>");
-
-				if (gradeData >= 90) {
-
-						 document.write( "" + nameData[i] + "A");
-				 }
-				 else if (gradeData >= 80) {
-
-						 document.write("" + nameData[i] + "B");
-				 }
-				 else if (gradeData >= 70) {
-						 document.write("" + nameData[i] + "C");
-				 }
-				 else if (gradeData >= 60) {
-						 document.write("" + nameData[i] + "D");
-				 }
-				 else {
-						 document.write("" + nameData[i] + "F");
-				 }
-
-		 }
-
-		 }
-
-
-
-</script>
-
-</head>
-<body onload="showPrompt()">
-<h2>Compute Average Grades</h2>
-
-
-
-<div id="content">
-<p>Enter names and grades into a tow-dimensional array (and array of two arrays)
- using text boxes for input and two buttons; one to "Add" input to the arrays
- and one to calculate the average grade and "Display" the information in the arrays.
-</p>
-<p>
-<label for="txtName">Student Name:</label>
-<input type="text" id="txtName" value="">
- <br><br>
-<label for="txtGrade">Grade:</label>
-<input type="text" id="txtGrade" value="">
- <br><br clear: left>
-</p>
-<div style="text-align:center">
-<input type="button" class = "btnClass" value="Add" onclick="addToArray()">&nbsp;&nbsp;
-<input type="button" class = "btnClass" value="Display" onclick="displayContent()">
+//This function uses another function, call Single Concern Function (able to use either function for various purposes)
+function calculatedGrade (average1) {
+  const average2 = calculateAverage (marks);
+  if (average2 < 60) return 'F'; //Add appropriate grade or feedback
+  if (average2 < 69) return 'D'; //Add approriate conditional
+  if (average2 < 79) return 'C';
+  if (average2 < 89) return 'B';
+  return A; //This is the last grade left, using the funnel image (metaphor)
+}
+function calculateAverage (array) {
+  let sum = 0;
+  for (let mark of marks) sum += mark; //Example of reading an array and one line to add up the sum of all the grades
+  return sum / marks.length; //"Divide the total marks by the number of grades"
+}
