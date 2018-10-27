@@ -1,4 +1,4 @@
-            int scores = score1, score2, score3, score4, score5;
+            int score1, score2, score3, score4, score5;
             double average;
             letterGrade = DetermineGrade;
 
