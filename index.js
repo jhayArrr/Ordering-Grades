@@ -1,28 +1,37 @@
-public static void Main(string[] args)
+namespace _25_point_grade_scale
+{
+    class Program
     {
-        int ARRAYLENGTH = 0;
-        int i = 0;
-        double sum = 0;
-
-        Console.WriteLine("How many scores would you like to enter? ");
-        ARRAYLENGTH = Convert.ToInt32(Console.ReadLine());
-
-        string[] test = new string[ARRAYLENGTH];
-
-        for (i = 0; i < test.Length; i++)
-
+        static void Main(string[] args)
         {
-            Console.Write("Enter your test score " + (i + 1) + ": ");
-            test[i] =
-            Console.ReadLine();
+            double testScore;
+
+            Console.WriteLine("Please enter your score out of 25");
+            Console.ReadLine());
+
+            if (testScore >= 24)
+            {
+                Console.WriteLine("A");
+            }
+            else if (testScore >= 20.75)
+
+            {
+                Console.WriteLine("B");
+            }
+            else if (testScore >= 18.25)
+
+            {
+                Console.WriteLine("C");
+            }
+            else if (testScore >= 15)
+
+            {
+                Console.WriteLine("D");
+            }
+            else
+            {
+                Console.WriteLine("F");
+            }
         }
-        for (i = 0; i < test.Length; i++)
-        {
-            sum = sum +
-            Convert.ToDouble(test[i].Trim());
-        }
-        Console.WriteLine("\nThis is your average = " + (sum / test.Length));
-        Console.WriteLine("\nYour grade is: ");//Not sure how this would work
-        Console.Write("\nPress the [Enter] key to exit.");
-        Console.ReadLine();
     }
+}
