@@ -1,10 +1,10 @@
 //Variable is an array for security
-var  calculatedGrade (average1) = [99, 90, 75, 89, 78, 84, 45, 69]; //add grades as an array
+const  average1 = [99, 90, 75, 89, 78, 84, 45, 69]; //add grades as an array
 var marks;
 
 //Use the calculatedGrade function as an output to the console
 //Note: example of using functions more than once (calculateAverage is used in console.log and calculatedGrade)
-console.log ("My letter grade is", calculatedGrade (average1), "because my numerical average is", calculateAverage (marks));
+console.log ("My letter grade is", calculatedGrade (average1), "because my numerical average is", calculateAverage (average2));
 
 function calculatedGrade (average2) {
   const average1 = calculateAverage (average2);
