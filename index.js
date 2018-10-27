@@ -5,7 +5,7 @@ var score1, score2, score3, score4, score5;
             score3 = GetInput("Third", 57);
             score4 = GetInput("Fourth", 56);
             score5 = GetInput("Last", 84);
-        }
+    
         public static int GetInput(string Order, out int t)
         {
             string inValue;
