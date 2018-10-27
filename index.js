@@ -1,59 +1,69 @@
-	public static void main(String[] args) throws IOException{
-		System.out.println("Enter numeric grade to convert to a letter grade, and press enter to calculate.");
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String userInput = br.readLine();
-        ArrayList<Integer> allGrades = new ArrayList<Integer>();
-        Scanner scan = new Scanner(userInput);
-        while(scan.hasNext()){
-        	try{
-        		int grade = Integer.parseInt(scan.next().trim());
-            	if(grade < 0) {
-            		System.out.println("You did not enter a valid grade. Grades cannot be less than 0");
-            	} else if(grade>100){
-            		System.out.println("You did not enter a valid grade. Grades cannot be greater than 100");
-            	} else{
-            		allGrades.add(grade);
-            	}
-        	} catch (NumberFormatException x){
-        		System.out.println("You did not enter a valid number as a grade. Sorry, please try again");
-        		System.exit(1);
-        	}
-        }
-        if(allGrades.size()!=0){
-        	int[] marks = new int[8];
-        	Arrays.fill(marks, 0);
-        	for (int x = 0; x < allGrades.size(); x++){
-        		int mark = allGrades.get(x);
-        		if(mark < 70){
-        			marks[0]++;
-        		} else if (mark < 70){
-        			marks[1]++;
-        		} else if(mark < 76){
-        			marks[2]++;
-        		} else if(mark < 80){
-        			marks[3]++;
-				} else if(mark < 86){
-				   marks[4]++;
-				} else if(mark < 90){
-					marks[5]++;
-				} else if(mark < 96){
-					marks[6]++;
-        		} else {
-        			marks[7]++;
-        		}
-        	}
+function addToArray() {
+		 txtName = document.getElementById("txtName").value;
+		 txtGrade = parseInt(document.getElementById("txtGrade").value);
 
-        	System.out.println( marks[0] +"'F'");
-        	System.out.println( marks[2] +"'D'");
-        	System.out.println( marks[3] +"'C'");
-        	System.out.println( marks[4] +"'B'");
-			System.out.println( marks[5] +"'B+'");
-			System.out.println( marks[6] +"'A'");
-			System.out.println( marks[7] +"'A+'");
+		 alert(txtName + " " + txtGrade);
+		 nameData.push(txtName);
+		 gradeData.push(txtGrade);
+
+		 document.getElementById("txtName").focus();
+		 document.getElementById("txtName").value = "";
+		 document.getElementById("txtGrade").value = "";
 
 
-        } else {
+ }
 
-        }
+ function displayContent() {
 
-	}
+		 for (var i = 0; i < nameData.length; i++) {
+
+			//document.write("" + nameData[i] + " ," + gradeData[i] + "<br>");
+
+				if (gradeData >= 90) {
+
+						 document.write( "" + nameData[i] + "A");
+				 }
+				 else if (gradeData >= 80) {
+
+						 document.write("" + nameData[i] + "B");
+				 }
+				 else if (gradeData >= 70) {
+						 document.write("" + nameData[i] + "C");
+				 }
+				 else if (gradeData >= 60) {
+						 document.write("" + nameData[i] + "D");
+				 }
+				 else {
+						 document.write("" + nameData[i] + "F");
+				 }
+
+		 }
+
+		 }
+
+
+
+</script>
+
+</head>
+<body onload="showPrompt()">
+<h2>Compute Average Grades</h2>
+
+
+
+<div id="content">
+<p>Enter names and grades into a tow-dimensional array (and array of two arrays)
+ using text boxes for input and two buttons; one to "Add" input to the arrays
+ and one to calculate the average grade and "Display" the information in the arrays.
+</p>
+<p>
+<label for="txtName">Student Name:</label>
+<input type="text" id="txtName" value="">
+ <br><br>
+<label for="txtGrade">Grade:</label>
+<input type="text" id="txtGrade" value="">
+ <br><br clear: left>
+</p>
+<div style="text-align:center">
+<input type="button" class = "btnClass" value="Add" onclick="addToArray()">&nbsp;&nbsp;
+<input type="button" class = "btnClass" value="Display" onclick="displayContent()">
