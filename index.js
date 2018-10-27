@@ -1,4 +1,4 @@
-namespace GradeCalc
+let namespace GradeCalc
 {
     class StudentGrade
     {
