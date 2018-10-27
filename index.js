@@ -1,8 +1,4 @@
-    class StudentGrade
-    {
-        public static void Main(string[] args)
-        {
-            int score1, score2, score3, score4, score5;
+            int scores = score1, score2, score3, score4, score5;
             double average;
             letterGrade = DetermineGrade;
 
