@@ -1,5 +1,3 @@
-let namespace GradeCalc
-{
     class StudentGrade
     {
         public static void Main(string[] args)
@@ -47,6 +45,5 @@ let namespace GradeCalc
         return letterGrade;
         Console.WriteLine(" Your Grade is a(n)" + letterGrade);
         Console.ReadKey();
-}
 }
 }
