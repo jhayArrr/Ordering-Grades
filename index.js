@@ -11,7 +11,7 @@ function calculatedGrade (average2) {
   if (average2 < 69) return 'D'; //Add approriate conditional
   if (average2 < 79) return 'C';
   if (average2 < 89) return 'B';
-  if (average <= 100) return 'A'; //This is the last grade left, using the funnel image (metaphor)
+  if (average2 <= 100) return 'A'; //This is the last grade left, using the funnel image (metaphor)
 }
 function calculateAverage (array) {
 }
