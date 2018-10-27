@@ -5,7 +5,7 @@ const average1 = [99, 90, 75, 89, 78, 84, 45, 69]; //add grades as an array
 //Note: example of using functions more than once (calculateAverage is used in console.log and calculatedGrade)
 console.log ("My letter grade is", calculatedGrade (average1), "because my numerical average is", calculateAverage (marks));
 
-function calculatedGrade (average1) {
+function calculatedGrade (average2) {
   const average1 = calculateAverage (marks);
   if (average2 < 60) return 'F'; //Add appropriate grade or feedback
   if (average2 < 69) return 'D'; //Add approriate conditional
