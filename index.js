@@ -1,37 +1,52 @@
-namespace _25_point_grade_scale
+namespace GradeCalc
 {
-    class Program
+    class StudentGrade
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            double testScore;
+            int score1, score2, score3, score4, score5;
+            double average;
+            letterGrade = DetermineGrade;
 
-            Console.WriteLine("Please enter your score out of 25");
-            Console.ReadLine());
-
-            if (testScore >= 24)
-            {
-                Console.WriteLine("A");
-            }
-            else if (testScore >= 20.75)
-
-            {
-                Console.WriteLine("B");
-            }
-            else if (testScore >= 18.25)
-
-            {
-                Console.WriteLine("C");
-            }
-            else if (testScore >= 15)
-
-            {
-                Console.WriteLine("D");
-            }
-            else
-            {
-                Console.WriteLine("F");
-            }
+            Console.WriteLine("Enter Your 5 Grades Below");
+            score1 = GetInput("First", 90);
+            score2 = GetInput("Second",87);
+            score3 = GetInput("Third", 57);
+            score4 = GetInput("Fourth", 56);
+            score5 = GetInput("Last", 84);
         }
-    }
+        public static int GetInput(string Order, out int t)
+        {
+            string inValue;
+            Console.WriteLine("Enter the {0} test score: ", Order);
+            inValue = Console.ReadLine();
+            t = Convert.ToInt32(inValue);
+            return t;
+        }
+        public static double CalcAvg (int score1, int score2, int score3, int score4, int score5)
+        {
+            return(score1 + score2 + score3 + score4 + score5) / 5;
+        }
+        public static char DetermineGrade (double avg)
+        {
+            char letterGrade;
+                if (avg > 89)
+                    letterGrade = 'A';
+                else
+                    if (avg > 79)
+                    letterGrade = 'B';
+                    else
+                        if (avg > 69)
+                        letterGrade = 'C';
+                        else
+                            if (avg > 59)
+                            letterGrade = 'D';
+                            else
+                                if (avg <= 59)
+                                letterGrade = 'F';
+        return letterGrade;
+        Console.WriteLine(" Your Grade is a(n)" + letterGrade);
+        Console.ReadKey();
+}
+}
 }
