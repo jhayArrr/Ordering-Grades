@@ -14,5 +14,8 @@ function calculateAverage (average1) {
   if (average1 < 89) return 'B' ;
   if (average1 <= 100) return 'A' ; //This is the last grade left, using the funnel image (metaphor)
 }
-function calculateAverage (array) {
+function calculateGrade (array) {
+  let sum = 0;
+  for (let mark of marks) sum += mark; //Example of reading an array and one line to add up the sum of all the grades
+  return sum / marks.length; //"Divide the total marks by the number of grades"
 }
