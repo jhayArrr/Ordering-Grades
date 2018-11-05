@@ -4,7 +4,7 @@ var average2;
 
 //Use the calculatedGrade function as an output to the console
 //Note: example of using functions more than once (calculateAverage is used in console.log and calculatedGrade)
-console.log ("My letter grade is", average1, "because my numerical average is", average2);
+console.log ("My letter grade is", average2, "because my numerical average is", average1);
 
 function calculateAverage (average1) {
   const average1 = calculatedGrade (average2);
